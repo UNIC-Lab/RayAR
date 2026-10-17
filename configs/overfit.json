@@ -1,0 +1,64 @@
+{
+  "experiment": {
+    "name": "map0_pa_los_sa3_rev3_fusion_strat_overfit",
+    "maps": [
+      0
+    ],
+    "split_mode": "within_map",
+    "train_ratio": 0.8,
+    "eval_split": "val"
+  },
+  "data": {
+    "prop_root": "assets/prop",
+    "building_root": "assets/buildings",
+    "los_root": "assets/los",
+    "cache_root": "assets/cache",
+    "rx_per_tx": 200,
+    "spatial_bins": 10,
+    "seed": 2026,
+    "building_height": 20.0,
+    "map_size": 256.0,
+    "pad_vertex_id": 65535
+  },
+  "model": {
+    "hidden_dim": 576,
+    "fusion_dim": 144,
+    "fusion_gate_groups": 16,
+    "ray_layers": 3,
+    "pointer_layers": 3,
+    "candidate_layers": 3,
+    "los_graph_dim": 128,
+    "los_graph_layers": 3,
+    "los_graph_heads": 4,
+    "heads": 9,
+    "dropout": 0.0,
+    "k_pre": 64,
+    "max_wall_tokens": 32,
+    "feature_dim": 12,
+    "endpoint_dim": 5,
+    "ray_dim": 17,
+    "wall_dim": 15,
+    "ray_wall_dim": 34,
+    "state_dim": 21
+  },
+  "train": {
+    "epochs": 100,
+    "batch_size": 16,
+    "lr": 0.0002,
+    "min_lr": 1e-06,
+    "scheduler": "linear",
+    "weight_decay": 0.0,
+    "grad_clip": 1.0,
+    "num_workers": 4,
+    "prefetch_factor": 2,
+    "decode_rx_limit": 200,
+    "decode_interval": 5,
+    "seed": 2026
+  },
+  "overfit": {
+    "enabled": true,
+    "map_id": 0,
+    "tx_count": 100,
+    "rx_per_tx": 200
+  }
+}

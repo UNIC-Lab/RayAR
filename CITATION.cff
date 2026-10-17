@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use RayAR in your research, please cite this repository."
+type: software
+title: "RayAR: Neural Autoregressive for Fast Dominant Radio Propagation Path Estimation"
+authors:
+  - family-names: Huang
+    given-names: Junxi
+  - family-names: Wang
+    given-names: Xiucheng
+  - family-names: Cheng
+    given-names: Nan
+  - family-names: Wang
+    given-names: Kailong
+  - family-names: Sun
+    given-names: Ruijin
+  - family-names: Yin
+    given-names: Zhisheng
+repository-code: "https://github.com/UNIC-Lab/RayAR"
+url: "https://github.com/UNIC-Lab/RayAR"
